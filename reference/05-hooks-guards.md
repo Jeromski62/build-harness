@@ -4,11 +4,11 @@
 
 There's now an assembly line with specialized roles, clear handoffs, and a reviewer.
 
-But agents forget. Not always, not on purpose, but it happens. A step gets skipped. A check gets left out. A follow-up action doesn't get triggered because nobody happened to think of it in that moment.
+But agents forget sometimes, without meaning to. A step gets skipped. A check gets left out. A follow-up action doesn't get triggered because nobody happened to think of it in that moment.
 
 **Hooks solve that.** They're deterministic code that automatically runs at certain points, regardless of whether a role remembered to do it.
 
-A hook doesn't forget. It's not an agent, it has no intelligence. It enforces a rule. Always.
+A hook has no intelligence and never forgets. It simply enforces a rule, every time.
 
 ## The Analogy: Bouncer vs. Consultant
 
@@ -34,7 +34,7 @@ Pre-hook  →  [role's action]  →  Post-hook
 
 ## Deriving Hooks From Hard Rules
 
-A hook doesn't come out of nowhere. It comes from asking Module 1 (hard rules) and Module 4 (handoffs) one question: **can a role forget this? If yes, hook.**
+A hook comes from asking Module 1 (hard rules) and Module 4 (handoffs) one question: **can a role forget this? If yes, hook.**
 
 Six patterns that show up in almost every field. The concrete implementation follows from the intake, not from this list:
 

@@ -20,7 +20,7 @@ A skill file is a markdown file that tells an agent:
 - What it outputs (format, structure)
 - What it explicitly does NOT do (this matters just as much)
 
-It's not a manual. It's a **precise assignment for a role.**
+Think of it as a **precise assignment for a role**, not a manual.
 
 ## The Analogy: Roles That Already Exist in the Field
 

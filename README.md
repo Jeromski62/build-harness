@@ -2,7 +2,7 @@
 
 An interactive Claude Code skill that walks you through designing your own multi-agent harness (context, roles, tools, pipeline, guards, evals, and observability), tailored to your own field through guided questions instead of a fixed template.
 
-It's not a static reference doc. It's a facilitator: Claude asks you about your domain, then co-builds the actual harness artifacts with you, one module at a time, exactly the way you'd run a real workshop.
+Claude asks you about your domain, then co-builds the actual harness artifacts with you, one module at a time, the way you'd run a real workshop rather than hand someone a reference doc to read on their own.
 
 ## Why
 

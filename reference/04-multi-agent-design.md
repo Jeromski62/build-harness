@@ -103,7 +103,7 @@ That's a **feedback loop**: the harness corrects itself without constant interve
 
 For all of this to work, someone needs to start the line. That's the person themselves, in the form of an **orchestrator prompt**.
 
-The orchestrator prompt isn't a separate agent. It's the instruction that kicks off an entire assembly line:
+The orchestrator prompt is simply the instruction that kicks off an entire assembly line, not a separate agent:
 
 ```
 "New task: [concrete description].

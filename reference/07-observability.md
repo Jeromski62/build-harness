@@ -81,7 +81,7 @@ After enough sessions, patterns become visible:
 - Where the reviewer gives FAIL most often
 - Which hooks trigger most often
 
-These aren't just nice numbers. They're signals for where the harness still isn't configured well enough.
+These numbers are signals for where the harness still isn't configured well enough.
 
 ## Observability vs. Hooks vs. Evals
 

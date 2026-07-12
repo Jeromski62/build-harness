@@ -6,7 +6,7 @@ Hooks check individual rules. The reviewer checks individual outputs. But who ch
 
 That's the job of evals.
 
-An eval isn't a test in the classic sense; it doesn't check whether code compiles. It checks whether the harness makes the right decisions. Whether it's consistent. Whether it still behaves as expected after a change.
+A classic test checks whether code compiles. An eval checks something different: whether the harness makes the right decisions, stays consistent, and still behaves as expected after a change.
 
 The question an eval answers:
 > "Given this input, does the harness reliably produce the right output?"

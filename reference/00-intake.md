@@ -4,9 +4,9 @@
 
 Every harness, whether it produces design tokens, contracts, financial reports, support replies, or code, has the same underlying structure: context, roles, tools, sequence, guards, quality criteria, visibility.
 
-What differs isn't the structure, it's the **content** that fills each slot. Before Module 1 starts, you need enough about the person's field to fill the generic placeholders in the following modules with real terms.
+The structure stays the same across fields; the **content** that fills each slot is what changes. Before Module 1 starts, you need enough about the person's field to fill the generic placeholders in the following modules with real terms.
 
-The intake isn't a module with its own artifact. It's the preparation that makes the other seven modules concrete.
+The intake's job is to prepare the ground for the other seven modules, not to produce an artifact of its own.
 
 ## Questions For You
 
