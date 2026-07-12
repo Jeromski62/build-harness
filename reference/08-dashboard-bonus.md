@@ -1,4 +1,4 @@
-# Module 8 — Observability Dashboard (Bonus)
+# Module 8: Observability Dashboard (Bonus)
 
 This module is optional and only becomes relevant once at least 5 real sessions have been logged.
 
@@ -8,14 +8,14 @@ This module is optional and only becomes relevant once at least 5 real sessions 
 - A local `index.html` (or a second tab, if a dashboard page already exists) with a "Metrics" view
 - Reads session logs directly from `harness/observability/logs/`
 - Visualizations: token cost over time, reviewer FAIL rate, hook frequency, pipeline comparison
-- No server, no build step — runs locally in the browser
+- No server, no build step; runs locally in the browser
 
 **Why only after real data:**
-A dashboard with dummy data doesn't show anything useful. Real data shows what's actually worth watching — and what was initially assumed incorrectly.
+A dashboard with dummy data doesn't show anything useful. Real data shows what's actually worth watching, and what was initially assumed incorrectly.
 
-**Harness artifact:** `index.html` (or its own file) — metrics dashboard
+**Harness artifact:** `index.html` (or its own file), the metrics dashboard
 
 ## Notes For Running This
 
 - If the person asks about this before 5 logs exist, briefly explain why it's worth waiting, and offer to run a real session now instead, to generate data.
-- For the dashboard itself: use the `dataviz` skill (if available) for color and chart conventions instead of inventing charts from scratch.
+- For the dashboard itself, use the `dataviz` skill (if available) for color and chart conventions instead of inventing charts from scratch.
