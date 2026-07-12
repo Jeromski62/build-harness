@@ -4,6 +4,10 @@ An interactive domain-agnostic skill that walks you through designing your own m
 
 Claude asks you about your domain, then co-builds the actual harness artifacts with you, one module at a time, the way you'd run a real workshop rather than hand someone a reference doc to read on their own.
 
+<p align="center">
+  <img src="assets/wheel.svg" alt="You at the center, Domain at the top, and clockwise around the wheel: Context, Skills, Tools, Multi-Agent, Hooks, Evals, Observability" width="420">
+</p>
+
 ## Why
 
 Most "how to build an agent system" guides teach you the concepts in the abstract, or show you one hardcoded example (usually code generation) that doesn't map cleanly onto your own field. This skill flips that: it asks about *your* domain first, including what you produce, what your source of truth is, what roles already exist in your workflow, and what must never go wrong. Only then does it build the harness, using your own vocabulary throughout.
