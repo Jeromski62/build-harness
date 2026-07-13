@@ -3,17 +3,17 @@
   <desc id="wheelDesc">You at the center. Domain at the top, then clockwise: Context, Skills, Tools, Multi-Agent, Hooks, Evals, Observability.</desc>
 
   <g stroke="#ffffff" stroke-width="3" stroke-linejoin="round">
-    <path d="M175.81,56.75 A220,220 0 0 1 344.19,56.75 L302.09,158.37 A110,110 0 0 0 217.91,158.37 Z" fill="hsl(210,50%,68%)"/>
-    <path d="M344.19,56.75 A220,220 0 0 1 463.25,175.81 L361.63,217.91 A110,110 0 0 0 302.09,158.37 Z" fill="hsl(255,50%,70%)"/>
-    <path d="M463.25,175.81 A220,220 0 0 1 463.25,344.19 L361.63,302.09 A110,110 0 0 0 361.63,217.91 Z" fill="hsl(300,45%,72%)"/>
-    <path d="M463.25,344.19 A220,220 0 0 1 344.19,463.25 L302.09,361.63 A110,110 0 0 0 361.63,302.09 Z" fill="hsl(345,50%,70%)"/>
-    <path d="M344.19,463.25 A220,220 0 0 1 175.81,463.25 L217.91,361.63 A110,110 0 0 0 302.09,361.63 Z" fill="hsl(25,60%,68%)"/>
-    <path d="M175.81,463.25 A220,220 0 0 1 56.75,344.19 L158.37,302.09 A110,110 0 0 0 217.91,361.63 Z" fill="hsl(45,65%,66%)"/>
-    <path d="M56.75,344.19 A220,220 0 0 1 56.75,175.81 L158.37,217.91 A110,110 0 0 0 158.37,302.09 Z" fill="hsl(140,42%,62%)"/>
-    <path d="M56.75,175.81 A220,220 0 0 1 175.81,56.75 L217.91,158.37 A110,110 0 0 0 158.37,217.91 Z" fill="hsl(175,42%,58%)"/>
+    <path d="M175.81,56.75 A220,220 0 0 1 344.19,56.75 L302.09,158.37 A110,110 0 0 0 217.91,158.37 Z" fill="#00D4B6"/>
+    <path d="M344.19,56.75 A220,220 0 0 1 463.25,175.81 L361.63,217.91 A110,110 0 0 0 302.09,158.37 Z" fill="#00D4B6"/>
+    <path d="M463.25,175.81 A220,220 0 0 1 463.25,344.19 L361.63,302.09 A110,110 0 0 0 361.63,217.91 Z" fill="#00D4B6"/>
+    <path d="M463.25,344.19 A220,220 0 0 1 344.19,463.25 L302.09,361.63 A110,110 0 0 0 361.63,302.09 Z" fill="#00D4B6"/>
+    <path d="M344.19,463.25 A220,220 0 0 1 175.81,463.25 L217.91,361.63 A110,110 0 0 0 302.09,361.63 Z" fill="#00D4B6"/>
+    <path d="M175.81,463.25 A220,220 0 0 1 56.75,344.19 L158.37,302.09 A110,110 0 0 0 217.91,361.63 Z" fill="#00D4B6"/>
+    <path d="M56.75,344.19 A220,220 0 0 1 56.75,175.81 L158.37,217.91 A110,110 0 0 0 158.37,302.09 Z" fill="#00D4B6"/>
+    <path d="M56.75,175.81 A220,220 0 0 1 175.81,56.75 L217.91,158.37 A110,110 0 0 0 158.37,217.91 Z" fill="#00D4B6"/>
   </g>
 
-  <g font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#171722" text-anchor="middle" dominant-baseline="middle">
+  <g font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="hsl(172,80%,12%)" text-anchor="middle" dominant-baseline="middle">
     <text x="260" y="95">Domain</text>
     <text x="376.7" y="143.3">Context</text>
     <text x="425" y="260">Skills</text>
@@ -24,6 +24,6 @@
     <text x="143.3" y="143.3">Observability</text>
   </g>
 
-  <circle cx="260" cy="260" r="108" fill="#1c1c28"/>
+  <circle cx="260" cy="260" r="108" fill="hsl(172,100%,14%)"/>
   <text x="260" y="260" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">YOU</text>
 </svg>
