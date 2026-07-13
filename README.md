@@ -16,13 +16,20 @@ The 8-module structure works for any field: design systems, legal review, financ
 
 ## Install
 
-Copy this repo into your project's skills folder:
+As a Claude Code plugin (recommended):
 
 ```
-your-project/.claude/skills/build-harness/
+/plugin marketplace add Jeromski62/build-harness
+/plugin install build-harness@build-harness
 ```
 
-That's it. No dependencies, no build step. It's plain markdown that Claude Code reads directly.
+Or copy the skill into your project's skills folder directly:
+
+```
+your-project/.claude/skills/build-harness/   ← copy contents of skills/build-harness/ here
+```
+
+Either way, no dependencies, no build step. It's plain markdown that Claude Code reads directly.
 
 ## Use
 
@@ -65,19 +72,23 @@ harness/
 ## Structure
 
 ```
-SKILL.md                          ← facilitation logic Claude follows
-reference/
-  00-intake.md                    ← domain intake questions
-  01-context-engineering.md       ← Modules 1-7: lesson + exercise + notes
-  02-rule-files-skills.md
-  03-tools-mcp.md
-  04-multi-agent-design.md
-  05-hooks-guards.md
-  06-evals.md
-  07-observability.md
-  08-dashboard-bonus.md
-templates/
-  CURRICULUM.template.md          ← progress-tracker skeleton
+.claude-plugin/
+  plugin.json                     ← plugin manifest
+  marketplace.json                ← lets /plugin marketplace add find this repo
+skills/build-harness/
+  SKILL.md                        ← facilitation logic Claude follows
+  reference/
+    00-intake.md                  ← domain intake questions
+    01-context-engineering.md     ← Modules 1-7: lesson + exercise + notes
+    02-rule-files-skills.md
+    03-tools-mcp.md
+    04-multi-agent-design.md
+    05-hooks-guards.md
+    06-evals.md
+    07-observability.md
+    08-dashboard-bonus.md
+  templates/
+    CURRICULUM.template.md        ← progress-tracker skeleton
 ```
 
 Each `reference/` file has four parts: **Core Idea** (the lesson, in plain language), **Questions For You** (what gets asked in chat), **What Gets Built** (the resulting artifact), and **Notes For Running This** (facilitation guidance for Claude, not shown to the user).

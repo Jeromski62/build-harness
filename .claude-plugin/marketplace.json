@@ -1,0 +1,15 @@
+{
+  "name": "build-harness",
+  "description": "Interactive workshop skill for building a domain-agnostic multi-agent harness.",
+  "owner": {
+    "name": "Philipp Jeroma",
+    "email": "philipp.jeroma@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "build-harness",
+      "source": "./",
+      "description": "Guides a person interactively through building their own multi-agent harness for their field, covering Context Engineering, Skill Files, Tools/MCP, Multi-Agent Pipeline, Hooks, Evals, and Observability."
+    }
+  ]
+}

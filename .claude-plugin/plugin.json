@@ -1,0 +1,14 @@
+{
+  "name": "build-harness",
+  "displayName": "Build Harness",
+  "version": "1.0.0",
+  "description": "Guides a person interactively through building their own multi-agent harness for their field, covering Context Engineering, Skill Files, Tools/MCP, Multi-Agent Pipeline, Hooks, Evals, and Observability. Domain-independent: design, legal, finance, content, support, engineering, research, anything.",
+  "author": {
+    "name": "Philipp Jeroma",
+    "email": "philipp.jeroma@gmail.com"
+  },
+  "repository": "https://github.com/Jeromski62/build-harness",
+  "license": "MIT",
+  "keywords": ["agentic-engineering", "multi-agent", "workshop", "harness", "skill"],
+  "skills": "./skills/"
+}
