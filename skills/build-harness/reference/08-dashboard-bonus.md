@@ -18,4 +18,3 @@ A dashboard with dummy data doesn't show anything useful. Real data shows what's
 ## Notes For Running This
 
 - If the person asks about this before 5 logs exist, briefly explain why it's worth waiting, and offer to run a real session now instead, to generate data.
-- For the dashboard itself, use the `dataviz` skill (if available) for color and chart conventions instead of inventing charts from scratch.

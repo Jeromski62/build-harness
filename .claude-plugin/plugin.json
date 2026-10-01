@@ -1,8 +1,8 @@
 {
   "name": "build-harness",
   "displayName": "Build Harness",
-  "version": "1.0.0",
-  "description": "Guides a person interactively through building their own multi-agent harness for their field, covering Context Engineering, Skill Files, Tools/MCP, Multi-Agent Pipeline, Hooks, Evals, and Observability. Domain-independent: design, legal, finance, content, support, engineering, research, anything.",
+  "version": "2.0.0",
+  "description": "Guides a person interactively through building their own multi-agent harness for their field in Claude Code, covering Context Engineering, Roles (subagents), Tools/MCP, Multi-Agent Pipeline, Hooks, Evals, and Observability. Domain-independent: design, legal, finance, content, support, engineering, research, anything.",
   "author": {
     "name": "Philipp Jeroma",
     "email": "philipp.jeroma@gmail.com"

@@ -41,7 +41,7 @@ Think of it as a power outlet:
 That means an MCP server someone else built (e.g. for Figma, GitHub, a database) works instantly in your own harness. You don't have to build it yourself.
 
 ```
-Agent (Claude, GPT, Gemini...)
+Agent (a role in Claude Code)
     ↕ MCP
 MCP Server (Figma, Filesystem, GitHub, internal system...)
     ↕
@@ -51,7 +51,7 @@ External System
 ## Two Kinds of Tools
 
 **1. Built-in Tools**
-Available directly in the agent system: reading/writing files, running code, web search. These don't need to be configured; they're just there.
+Available directly in the agent system: reading/writing files, running code, web search. These don't need to be installed; a role just needs them on its list.
 
 **2. MCP Servers**
 External servers that provide specialized tools, for exactly the system this field works with. These need to be configured: which servers are available.
@@ -64,25 +64,42 @@ Go through the roles from Module 2 and ask for each: what does it need to read? 
 |---|---|---|
 | *(from Module 2, role 1)* | *(read/write/check what)* | *(Filesystem / MCP server / Custom)* |
 | *(from Module 2, role 2)* | … | … |
-| Reviewer | Ability to read everything the others produced | Filesystem (usually enough) |
+| Reviewer | Ability to read everything the others produced | `Read, Grep, Glob` (usually enough) |
 
 Two or three tool categories usually cover almost everything; the rest is optional or very specific.
 
 ## How Tools Get Configured
 
-Tools aren't defined in the skill files; they're configured in the harness and made available to the agents.
+Two places, two questions.
+
+**1. Which servers exist?** One file at the project root, `.mcp.json`:
 
 ```json
-// harness/tools/mcp.config.json
 {
   "mcpServers": {
     "<name>": {
       "command": "<mcp-server-command>",
-      "description": "What this server is needed for"
+      "args": ["<argument>"]
     }
   }
 }
 ```
+
+**2. Which role may use what?** The `tools` line in each role file from Module 2:
+
+```markdown
+---
+name: <creator-role>
+description: ...
+tools: Read, Grep, Glob, Write, Edit, mcp__<server>__<tool>
+---
+```
+
+`tools` is an allowlist: a role can use what's listed and nothing else. Built-in tools go by their name (`Read`, `Write`, `Edit`, `Bash`, `Grep`, `Glob`). Tools from an MCP server are named `mcp__<server>__<tool>`; `mcp__<server>` alone grants every tool that server offers.
+
+This is where the boundaries from Module 2 become enforceable. A role whose file says "doesn't change the source of truth" and whose `tools` line has no write tool for it can't cross that line, even by mistake.
+
+For the reviewer, list MCP tools one by one and only the ones that read. `mcp__<server>` would hand it the server's write tools too.
 
 ## Tool Descriptions Are Context
 
@@ -112,10 +129,16 @@ Returns the full content of the requested record.
 
 ## What Gets Built
 
-- `harness/tools/mcp.config.json`: which MCP servers are active
-- `harness/tools/tool-descriptions.md`: what each tool does and when a role should use it
+- `.mcp.json` at the project root: which MCP servers are active (skip it if no role needs an external system)
+- The `tools` line in every role file under `.claude/agents/`, updated to what that role actually needs
+- Where a role should use a tool at a specific moment ("check for an existing record before creating one"), that sentence goes into the role's Process section
+- Optional: `harness/tools/tool-descriptions.md`, a plain overview for humans of which role uses which tool. Agents don't load it.
 
 ## Notes For Running This
 
+- If `.mcp.json` already exists, add to it; don't replace it. Show the person the result before writing.
+- Never write secrets (API keys, tokens) into `.mcp.json`. Reference an environment variable instead (`"${API_KEY}"`) and note in `HANDOUT.md` that it needs to be set.
+- Claude Code asks for approval before using servers from a project's `.mcp.json`. Tell the person to start a new session and approve them, then check with `/mcp` that they're connected.
+- You don't write the descriptions of an existing MCP server's tools; the server brings them. The "good vs. bad description" lesson applies to custom tools and to how the role file tells a role when to use a tool.
 - If it's unclear whether an MCP server exists, say so openly. Don't guess or invent one. Research it if possible, or flag it in `HANDOUT.md` as an open item.
 - Start small: two well-described tools beat ten half-finished ones.

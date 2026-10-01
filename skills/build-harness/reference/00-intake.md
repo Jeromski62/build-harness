@@ -6,7 +6,7 @@ Every harness, whether it produces design tokens, contracts, financial reports, 
 
 The structure stays the same across fields; the **content** that fills each slot is what changes. Before Module 1 starts, you need enough about the person's field to fill the generic placeholders in the following modules with real terms.
 
-The intake's job is to prepare the ground for the other seven modules, not to produce an artifact of its own.
+The intake's job is to prepare the ground for the seven core modules that follow, not to produce an artifact of its own.
 
 ## Questions For You
 
@@ -25,7 +25,7 @@ Ask these in 2-3 groups, not all at once. Keep it as light as a conversation, no
 
 **Group 3: What must never happen, and who works on what?**
 - What must an agent in this field **never** do? (The hardest, non-negotiable rules; even if there's only one, this is the single most important sentence in the whole intake)
-- What different work steps/roles normally exist when a human does this work? (This becomes the blueprint for the skill files in Module 2)
+- What different work steps/roles normally exist when a human does this work? (This becomes the blueprint for the roles in Module 2)
 - How do you recognize good work in this field, and bad work? What would an experienced person in this field immediately flag as a mistake?
 - What tools/systems does the agent need access to? (A design tool, a code repo, a database, an external API …)
 
@@ -34,7 +34,7 @@ Ask these in 2-3 groups, not all at once. Keep it as light as a conversation, no
 The answers don't produce a standalone artifact, but instead:
 - A **project name/slug** (e.g. `legal-review-harness`, `support-macro-harness`)
 - A **one-sentence goal**, which lands in `CURRICULUM.md`, following the pattern: *"A system of agents, rules, tools, and guards that reliably turns [input] into [output], without [person] having to steer every step themselves."*
-- A first `CURRICULUM.md`, following `templates/CURRICULUM.template.md`, with the goal sentence and all 8 modules marked ⬜
+- A first `CURRICULUM.md`, following `templates/CURRICULUM.template.md`, with the goal sentence and modules 1-8 marked ⬜
 
 ## Notes For Running This
 

@@ -66,11 +66,11 @@ Claude Code supports hooks via `settings.json`. Hooks are shell commands or scri
 // .claude/settings.json
 {
   "hooks": {
-    "PostToolUse": [
+    "PreToolUse": [
       {
-        "matcher": "Write",
+        "matcher": "Write|Edit",
         "hooks": [
-          { "type": "command", "command": "node harness/hooks/<check-name>.js" }
+          { "type": "command", "command": "node \"${CLAUDE_PROJECT_DIR}/harness/hooks/<check-name>.js\"" }
         ]
       }
     ]
@@ -79,6 +79,12 @@ Claude Code supports hooks via `settings.json`. Hooks are shell commands or scri
 ```
 
 So a hook is a script that runs on a specific event. The script itself is plain code, no AI, no agent.
+
+- `PreToolUse` is the pre-hook: it runs before a tool is used and can stop it. `PostToolUse` is the post-hook: the action has already happened, so the script can only report back or trigger a follow-up.
+- `matcher` says which tools the hook watches. `Write|Edit` covers both ways a role can change a file; `Write` alone misses every edit to an existing file.
+- The script receives the details of the action (which tool, which file, which role) and answers with allow or block plus a reason. The role sees that reason and can correct itself.
+
+Hooks apply to every role automatically, the reviewer and all creator roles included. That's the difference to the `tools` list from Module 3: `tools` decides what a role can touch at all, hooks check what it does with it.
 
 ## Hooks vs. Reviewer: the Difference
 
@@ -101,11 +107,14 @@ Hooks and reviewer complement each other: the hook catches mechanical mistakes, 
 
 ## What Gets Built
 
-- `harness/hooks/hooks.config.json`: which hooks run when
 - One script per hook, under `harness/hooks/`, e.g. `harness/hooks/<check-name>.js`
-- The wiring into `.claude/settings.json`, so the hooks actually run automatically
+- The wiring into `.claude/settings.json`, so the hooks actually run automatically. That file is the single place that says which hook runs when.
 
 ## Notes For Running This
 
+- If `.claude/settings.json` already exists, merge the new entry into it and keep everything else. Show the person the result before writing.
+- Ask which script runtime is installed (Node, Python, plain shell) and write the hook in that. A hook in a language the machine can't run fails silently.
+- Before writing the first script, check the current hook input and output format in the Claude Code docs. Test each hook once with an action that should be blocked and once with one that shouldn't.
+- Settings changes are picked up without a restart. `/hooks` shows what's active.
 - Start with the one hook that covers the most expensive past failure mode, not all six patterns at once.
-- A hook that never triggers isn't a problem. A hook that triggers constantly is a signal of a context problem back in Module 1 or 2, not primarily a hook problem.
+- A hook that never triggers isn't a problem. A hook that triggers constantly is a signal of a context problem back in Module 1 or 2 (house rules or a role file), not primarily a hook problem.

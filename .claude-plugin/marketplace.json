@@ -9,7 +9,7 @@
     {
       "name": "build-harness",
       "source": "./",
-      "description": "Guides a person interactively through building their own multi-agent harness for their field, covering Context Engineering, Skill Files, Tools/MCP, Multi-Agent Pipeline, Hooks, Evals, and Observability."
+      "description": "Guides a person interactively through building their own multi-agent harness for their field in Claude Code, covering Context Engineering, Roles (subagents), Tools/MCP, Multi-Agent Pipeline, Hooks, Evals, and Observability."
     }
   ]
 }
