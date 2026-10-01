@@ -1,6 +1,6 @@
-# build-harness
+# Build your own AI team
 
-An interactive domain-agnostic skill that walks you through designing your own multi-agent harness (context, roles, tools, pipeline, guards, evals, and observability), tailored to your own field through guided questions instead of a fixed template.
+An interactive Claude Code workshop that walks you through designing your own multi-agent harness, tailored to your field through guided questions instead of a fixed template.
 
 Claude asks you about your domain, then co-builds the actual harness artifacts with you, one module at a time, the way you'd run a real workshop rather than hand someone a reference doc to read on their own.
 
